@@ -39,6 +39,21 @@ public class ProcessList
         return size;
     }
 
+    public void remove(int index)
+    {
+        if(index < 0 || index >= size)
+        {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+        System.arraycopy(data, index + 1, data, index, size - index - 1);
+        size--;
+    }
+
+    public void clear()
+    {
+        size = 0;
+    }
+
     public Process[] toArray()
     {
         Process[] result = new Process[size];
