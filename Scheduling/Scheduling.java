@@ -1,3 +1,9 @@
+/*Write a program using C/C++/Java to simulate the FCFS, SJF (pre-emptive as well as non
+preemptive approach). The scenario is: user may input n processes with respective CPU burst 
+time and arrival time. System will ask the user to select the type of algorithm from the list 
+mentioned above. System should display the waiting time for each process, average waiting 
+time for the whole system, and final execution sequence.  */
+
 import java.util.Scanner;
 class Process
 {
@@ -11,6 +17,7 @@ class Process
     {
         this.arrivalTime = arrivalTime;
         this.burstTime = burstTime;
+        this.remainingTime = burstTime;
     }
 }
 
